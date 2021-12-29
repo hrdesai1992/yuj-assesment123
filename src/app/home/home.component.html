@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search for..." [(ngModel)]="searchText" >
+          </div>
+        </div>
+      </div>
+
+
+    <svg viewBox="0 0 160 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="bg-svg ng-tns-c160-3"><polygon points="160,27,160,79,0,20" fill="#3b78e7" class="ng-tns-c160-3"></polygon><polygon points="0,0 0,79,160,27,160,0" fill="#4285f4" class="ng-tns-c160-3"></polygon><polygon points="85.04,51.36,125,38.375,87.5,52.27" fill="#3367d6" class="ng-tns-c160-3"></polygon></svg>
+    <div class="row">
+        <div class="col-sm-4 card-box" style="text-align: center;" *ngFor="let item of jsonFile.jsonFile | filter: searchText">
+            <img src="https://gstatic.com/images/branding/product/2x/avatar_anonymous_512dp.png" alt="" height="100px" width = "100px" >
+            <h3>{{item.name}}</h3>
+            <p>{{item.products}}</p>
+            <p>
+                <img src="https://gstatic.com/alkali/apps/bento/images/medals/diamond_x3.png" alt="" height="24px" width = "24px" style="margin-right:5px;">
+                <img src="https://gstatic.com/alkali/apps/bento/images/medals/gold_x3.png" alt="" height="24px" width = "24px" style="margin-right:5px;">
+                <img src="https://gstatic.com/alkali/apps/bento/images/medals/silver_x3.png" alt="" height="24px" width = "24px">
+            </p>
+        </div>
+    </div>
+</div>
